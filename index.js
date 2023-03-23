@@ -32,14 +32,14 @@ console.log(result);
 // змінної `value`. Використовуй методи `Math.floor()`, `Math.ceil()` та
 // `Math.round()`. Перевір що буде в консолі при значеннях `27.3` та `27.9`.
 
-const value = 27.7;
-const rounded = Math.round(value);
-const roundedDown = Math.floor(value);
-const roundedUp = Math.ceil(value);
+//const value = 27.7;
+//const rounded = Math.round(value);
+//const roundedDown = Math.floor(value);
+//const roundedUp = Math.ceil(value);
 // ```
-console.log("Math.round", rounded);
-console.log("Math.roundedDown", roundedDown);
-console.log("Math.roundedUp", roundedUp);
+//console.log("Math.round", rounded);
+//console.log("Math.roundedDown", roundedDown);
+//console.log("Math.roundedUp", roundedUp);
 
 // ## Example 5 - Шаблонні рядки
 
@@ -47,12 +47,12 @@ console.log("Math.roundedUp", roundedUp);
 // змінні вставлені в рядок.
 
 // ```js
-const companyName = 'Cyberdyne Systems';
-const repairBots = 150;
-const defenceBots = 50;
-const totalBots = repairBots + defenceBots;
-const message = `${companyName} has ${totalBots} bots in stock`;
-console.log(message); // "Cyberdyne Systems has 200 bots in stock"
+//const companyName = 'Cyberdyne Systems';
+//const repairBots = 150;
+//const defenceBots = 50;
+//const totalBots = repairBots + defenceBots;
+//const message = `${companyName} has ${totalBots} bots in stock`;
+//console.log(message); // "Cyberdyne Systems has 200 bots in stock"
 // ```
 
 // ## Example 6 - Методи рядків та чейнінг
@@ -103,46 +103,46 @@ console.log(message); // "Cyberdyne Systems has 200 bots in stock"
 // ## Example 7 - Оператори порівняння та приведення типів
 
 // Яким буде результат виразів?
-console.log('\n==============');
-console.log(5 > 4); // true
-console.log(10 >= '7'); // true. 
-console.log('2' > '12'); // true. String порівнюються посимвольно по коду символа. Як отримати код символа https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
-console.log('2' < '12'); // false
-console.log('4' == 4); // true
-console.log('6' === 6); // false. 
-console.log('false' === false); // false
-console.log(1 == true);  // true. 
-console.log(1 === true); // false.
-console.log('0' == false); //true.
-console.log('0' === false); // false.
-console.log('Papaya' < 'papaya'); // true.
-const a = 'Papaya'.charCodeAt(0);
-const b = 'papaya'.charCodeAt(0);
-console.log(a,b)
+//console.log('\n==============');
+//console.log(5 > 4); // true
+//console.log(10 >= '7'); // true. 
+//console.log('2' > '12'); // true. String порівнюються посимвольно по коду символа. Як отримати код символа https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+//console.log('2' < '12'); // false
+//console.log('4' == 4); // true
+//console.log('6' === 6); // false. 
+//console.log('false' === false); // false
+//console.log(1 == true);  // true. 
+//console.log(1 === true); // false.
+//console.log('0' == false); //true.
+//console.log('0' === false); // false.
+//console.log('Papaya' < 'papaya'); // true.
+//const a = 'Papaya'.charCodeAt(0);
+//const b = 'papaya'.charCodeAt(0);
+//console.log(a,b)
 
-console.log('Papaya' === 'papaya'); // false. 
-console.log(undefined == null); // true.
-console.log(undefined === null); // false.
+//console.log('Papaya' === 'papaya'); // false. 
+//console.log(undefined == null); // true.
+//console.log(undefined === null); // false.
 // ```
 // ## Example 8 - Логічні оператори
 
 // Яким буде результат виразів?
 // && - Оператор приводить всі операнди до типу Boolean, і повертає перший який дасть false. Або останній, якщо false нема
 // || - Оператор приводить всі операнди до типу Boolean, і повертає перший який дасть true. Або останній, якщо true нема
-console.log(true && 3); // 3
-console.log(false && 3); // false
-console.log(1 && null && 2); // null
-console.log(true && 0 && 'kiwi'); // 0
+//console.log(true && 3); // 3
+//console.log(false && 3); // false
+//console.log(1 && null && 2); // null
+//console.log(true && 0 && 'kiwi'); // 0
 // true //true
 // 0 // false
 // 'kiwi' // true
 
-console.log(true || 3); // true
-console.log(true || 3 || 4); // true
-console.log(true || false || 7); // true
-console.log(null || 2 || undefined); // 2
+//console.log(true || 3); // true
+//console.log(true || 3 || 4); // true
+//console.log(true || false || 7); // true
+//console.log(null || 2 || undefined); // 2
 
-console.log((1 && null && 2) > 0); // false
+//console.log((1 && null && 2) > 0); // false
 // 1 // true
 // null // false
 // 2 // true
@@ -152,8 +152,8 @@ console.log((1 && null && 2) > 0); // false
  * 2. Виконуються порівняння null > 0
  */
 
-console.log(2 && 3); // 3
-console.log(null || (2 && 3) || 4); // 3
+//console.log(2 && 3); // 3
+//console.log(null || (2 && 3) || 4); // 3
 // 2 //true
 // 3 //true
 // 2 && 3 = 3
@@ -179,11 +179,11 @@ console.log(null || (2 && 3) || 4); // 3
 // false. Використовуй оператор `??` (nullish coalescing operator).
 
 // ```js
-const incomingValue = null;
-const defaultValue = 10;
-const value1 = incomingValue ?? defaultValue;
+//const incomingValue = null;
+//const defaultValue = 10;
+//const value1 = incomingValue ?? defaultValue;
 
-console.log(value1);
+//console.log(value1);
 // ```
 
 // ## Example 10 - Оператор % та методи рядків
@@ -195,17 +195,16 @@ console.log(value1);
 // - 450 покаже 07:30
 // - 1441 покаже 24:01
 
-// ```js
-const totalMinutes = 450;
+//const totalMinutes = 450;
 
-const hours = Math.floor(totalMinutes/60);
-const minutes = totalMinutes % 60;
+//const hours = Math.floor(totalMinutes/60);
+//const minutes = totalMinutes % 60;
 
-const formatedTime = `${String(hours).padStart(2, '0')}:${minutes}`;
-console.log(formatedTime);
+//const formatedTime = `${String(hours).padStart(2, '0')}:${minutes}`;
+//console.log(formatedTime);
 
-const string = 'abc';
-console.log(string.padStart(4, '5'))
+//const string = 'abc';
+//console.log(string.padStart(4, '5'))
 
 // ```
 
@@ -306,3 +305,104 @@ console.log(string.padStart(4, '5'))
 //console.log("Bad");
 //break;
 //}
+
+///вивести в консоль числа від 1 до 10 кратні 2 (часта задача на СБ)
+//for (let i = 1; i <=10; i += 1) {
+    //if (i % 2 !== 0) {
+//continue;
+ //   }
+ //   console.log(i);
+//}
+
+/// continue - пропускає/ігнорує
+/// break - пририває
+//for (let i = 1; i <=10; i += 1) {
+ //   if (i === 5) {
+  //      break;
+ //   }
+ //   console.log(i);
+//}
+// прописуємо switch для попереднього циклу
+//for (let i = 1; i <=10; i += 1) {
+//    switch (i) {
+//        case 5:
+//        break;
+//        default:
+//            break;
+//    }    
+//console.log(i);
+//}
+
+// ## Example 2 - Отображение времени (if...else)
+
+// Напиши скрипт для отображения часов и минут в консоли браузера в виде строки
+// формата `"14 ч. 26 мин."`. Если значение переменной `minutes` равно `0`, то
+// выводи строку `"14 ч."`, без минут.
+
+//const hours = 14;
+//const minutes = 26;
+//let timeString;
+
+//if (minutes === 0) {
+//    timeString = `${hours} год`;
+//} else {
+//    timeString = `${hours}год ${minutes}хв`;
+//}
+
+// const minutes = 74; // 1 год 14 хв
+// const minutes = 1023; // ?
+// const minutesValue = minutes % 60;
+// const hours = Math.floor(minutes / 60);
+// console.log(`${hours}:${minutesValue}`);
+// console.log(`${hours}год ${minutesValue}хв`);
+
+// ## Example 8 - Цикл for
+
+// Напиши цикл for который выводит в консоль браузера числа по возрастанию от `min`
+// до `max`, но только если число кратное `5`.
+
+// const max = 100;
+// const min = 20;
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 5 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// або (якщо мін значення кратне 5)
+// for (let i = min; i <= max; i += 5) {
+//   console.log(i);
+// }
+
+// do while - різниця
+// приклад на умові попередньої задачі
+//let i = min;
+// while (i <= max) {
+//   if (i % 5 === 0) {
+//     console.log(i);
+//   }
+//   i += 1;
+// }
+
+// let i = min;
+// do {
+//   if (i % 5 === 0) {
+//     console.log(i);
+//   }
+//   i += 1;
+// } while (i <= max);
+
+// приклад використання - банкомат
+// const password = "admin";
+// let userPassword;
+
+// do {
+//   userPassword = prompt("Enter password");
+//   console.log(userPassword);
+// } while (userPassword !== password);
+
+// Зациклення. Не існує сценарію для закінчення
+// do {
+//   userPassword = prompt("Enter password");
+//   console.log(userPassword);
+// } while (true);
