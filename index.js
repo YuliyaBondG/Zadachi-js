@@ -553,5 +553,129 @@
 // };
 // ```
 
+// function processCall(recipient, onAvailable, onNotAvailable) {
+// // Имитируем доступность абонента случайным числом
+// const isRecipientAvailable = Math.random() > 0.5;
 
-///
+// if (!isRecipientAvailable) {
+// onNotAvailable(recipient);
+// return;
+// }
+
+// onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+// console.log(`Соединяем с ${name}, ожидайте...`);
+// // Логика принятия звонка
+// }
+
+// function activateAnsweringMachine(name) {
+// console.log(`Абонент ${name} недоступен, оставьте сообщение.`);
+// // Логика активации автоответчика
+// }
+
+// function leaveHoloMessage(name) {
+// console.log(`Абонент ${name} недоступен, записываем голограмму.`);
+// // Логика записи голограммы
+// }
+
+// processCall("Манго", takeCall, activateAnsweringMachine);
+// processCall("Поли", takeCall, leaveHoloMessage);
+
+// # Модуль 4. Занятие 7. Коллбеки. Стрелочные функции. forEach
+
+// ## Example 1 - Коллбек функции
+
+// Напишите следующие функции:
+
+// - `createProduct(obj, callback)` - принимает объект товара без id, а также
+//   колбек. Функция создаёт обьект товара, добавляя ему уникальный идентификатор в
+//   свойство `id` и вызывает колбек передавая ему созданный обьект.
+// - `logProduct(product)` - коллбек принимающий обьект продукта и логирующий его в
+//   консоль
+// - `logTotalPrice(product)` - коллбек принимающий обьект продукта и логирующий
+//   общую стоимость товара в консоль
+
+// ```js
+// // Решение
+// function createProduct(partialProduct, callback) {
+//   const product = { id: Date.now(), ...partialProduct };
+//   callback(product);
+// }
+
+// function logProduct(product) {
+//   console.log(product);
+// }
+
+// function logTotalPrice(product) {
+//   console.log(product.price * product.quantity);
+// }
+
+// 1) Додати логіку генерації id
+// 2) Навчити нашу ф-ю працювати з callback
+// 3) callback має вміти приймати обєкт товара
+
+// createProduct({ name: "🍎", price: 30, quantity: 3 }, logProduct);
+// createProduct({ name: "🍋", price: 20, quantity: 5 }, logTotalPrice);
+
+// function createProduct(product, callback) {
+//   const id = Date.now();
+//   const newProduct = { ...product, id };
+//   //   product.id = id;
+//   callback(newProduct);
+//   // callback = logTotalPrice
+//   // logTotalPrice(newProduct);
+// }
+
+// function logProduct(item) {
+//   console.log(item);
+// }
+
+// function logTotalPrice(item) {
+//   console.log(item.price * item.quantity);
+//   return item.price * item.quantity;
+// }
+
+// ```
+// ## Example 6 - Инлайн стрелочные функции
+
+// Выполните рефакторинг кода используя стрелочные функции.
+
+// ```js
+// function each(array, callback) {
+//   const newArray = [];
+//   for (let el of array) {
+//     const result = callback(el);
+//     newArray.push(result);
+//   }
+//   return newArray;
+// }
+
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return value * 2;
+//   })
+// );
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return value - 10;
+//   })
+// );
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return Math.sqrt(value);
+//   })
+// );
+// console.log(
+//   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
+//     return Math.ceil(value);
+//   }),
+// );
+// console.log(
+//   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
+//     return Math.floor(value);
+//   }),
+// );
+// ```
+
